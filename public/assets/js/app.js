@@ -1072,7 +1072,7 @@ module.exports = function normalizeComponent (
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(11);
-module.exports = __webpack_require__(46);
+module.exports = __webpack_require__(51);
 
 
 /***/ }),
@@ -46795,13 +46795,13 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(51)
+  __webpack_require__(44)
 }
 var normalizeComponent = __webpack_require__(9)
 /* script */
-var __vue_script__ = __webpack_require__(44)
+var __vue_script__ = __webpack_require__(49)
 /* template */
-var __vue_template__ = __webpack_require__(55)
+var __vue_template__ = __webpack_require__(50)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -46842,64 +46842,46 @@ module.exports = Component.exports
 
 /***/ }),
 /* 44 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// style-loader: Adds some css to the DOM by adding a <style> tag
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      notifications: {
-        count: 23,
-        items: [{}, {}, {}, {}, {}, {}]
-      }
-    };
-  },
-  mounted: function mounted() {
-    console.log('Component mounted.');
-    // Echo.private(`order.${orderId}`)
-    //     .listen('NewOrderCreated', (e) => {
-    //         console.log("Order created");
-    //     });
-  }
-});
+// load the styles
+var content = __webpack_require__(45);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(47)("0411ff05", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6a744a1a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Notification-menu.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6a744a1a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Notification-menu.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ }),
-/* 45 */,
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(46)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.badge.badge-pill.badge-danger.position-relative[data-v-6a744a1a]{\n    bottom:10px;\n    right:15px;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
 /* 46 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 47 */,
-/* 48 */
 /***/ (function(module, exports) {
 
 /*
@@ -46981,49 +46963,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 49 */,
-/* 50 */,
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(52);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(53)("0411ff05", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6a744a1a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Notification-menu.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6a744a1a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./Notification-menu.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(48)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n.badge.badge-pill.badge-danger.position-relative[data-v-6a744a1a]{\n    bottom:10px;\n    right:15px;\n}\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 53 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -47042,7 +46982,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(54)
+var listToStyles = __webpack_require__(48)
 
 /*
 type StyleObject = {
@@ -47244,7 +47184,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 54 */
+/* 48 */
 /***/ (function(module, exports) {
 
 /**
@@ -47277,7 +47217,77 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 55 */
+/* 49 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['current_url'],
+  data: function data() {
+    return {
+      notifications: {
+        count: 4,
+        all: this.current_url,
+        items: [{ id: 1,
+          name: 'John Aloyce',
+          message: 'Hi there, This is Aloyce',
+          url: this.current_url + '/1'
+        }, { id: 2,
+          name: 'John Aloyce',
+          message: 'Hi there, This is Aloyce',
+          url: this.current_url + '/2'
+        }, { id: 3,
+          name: 'John Aloyce',
+          message: 'Hi there, This is Aloyce',
+          url: this.current_url + '/3'
+        }, { id: 4,
+          name: 'John Aloyce',
+          message: 'Hi there, This is Aloyce',
+          url: this.current_url + '/4'
+        }]
+      }
+    };
+  },
+  mounted: function mounted() {
+    console.log(this.current_url);
+    // Echo.private(`order.${orderId}`)
+    //     .listen('NewOrderCreated', (e) => {
+    //         console.log("Order created");
+    //     });
+  },
+
+  methods: {}
+});
+
+/***/ }),
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -47318,46 +47328,41 @@ var render = function() {
       [
         _vm._l(_vm.notifications.items, function(item) {
           return [
-            _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
-              _vm._m(0, true, false)
-            ]),
+            _c(
+              "a",
+              { staticClass: "dropdown-item", attrs: { href: item.url } },
+              [
+                _c("div", [
+                  _c("i", { staticClass: "fa fa-envelope fa-fw" }),
+                  _vm._v(" New message from "),
+                  _c("span", { staticClass: "text-success" }, [
+                    _vm._v(_vm._s(item.name))
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "mr-auto p-2 text-muted small" }, [
+                    _vm._v("4 minutes ago")
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "dropdown-divider" })
           ]
         }),
         _vm._v(" "),
-        _vm._m(1, false, false)
+        _c("div", { staticClass: "text-center link-block" }, [
+          _c("a", { attrs: { href: _vm.notifications.all } }, [
+            _c("strong", [_vm._v("See All Alerts")]),
+            _vm._v(" "),
+            _c("i", { staticClass: "fa fa-angle-right" })
+          ])
+        ])
       ],
       2
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("i", { staticClass: "fa fa-envelope fa-fw" }),
-      _vm._v(" You have 16 messages\n                "),
-      _c("span", { staticClass: "mr-auto p-2 text-muted small" }, [
-        _vm._v("4 minutes ago")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center link-block" }, [
-      _c("a", { attrs: { href: "notifications.html" } }, [
-        _c("strong", [_vm._v("See All Alerts")]),
-        _vm._v(" "),
-        _c("i", { staticClass: "fa fa-angle-right" })
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -47366,6 +47371,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-6a744a1a", module.exports)
   }
 }
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
